@@ -34,9 +34,11 @@
           <%= yield %>
           <!-- END main content -->
       </main>
-      <nav class="col-xs-3">
-        <%= link_to 'Submit a new link', new_post_path %>
-      </nav>
+      <div class="col-xs-3">
+        <nav>
+          <%= link_to 'Submit a new link', new_post_path %>
+        </nav>
+      </div>
     </div>
   </div>
   <div class="push"></div>
