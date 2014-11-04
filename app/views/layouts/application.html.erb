@@ -11,12 +11,13 @@
 <div class="container wrap">
   <div class="row">
     <div class="col-xs-12">
-      <header>Elevennit</header>
+      <header><%= link_to 'Elevennit', posts_path %></header>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <main class= "col-xs-9">
+      <div class="col-xs-9">
+        <main>
           <% flash.each do |name, msg| -%>
             <% if msg.is_a? Array -%>
               <div class="<%= name %>">
@@ -33,10 +34,12 @@
           <!-- BEGIN main content -->
           <%= yield %>
           <!-- END main content -->
-      </main>
+        </main>
+      </div>
       <div class="col-xs-3">
         <nav>
           <%= link_to 'Submit a new link', new_post_path %>
+          <%= link_to 'Submit a new text post', new_post_path(post_type: :text) %>
         </nav>
       </div>
     </div>

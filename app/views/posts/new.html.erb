@@ -4,19 +4,22 @@
     <%= f.text_field :title %>
   </div>
 
-  <div>
-    <%= f.label :link %>
-    <%= f.text_field :link %>
-  </div>
+  <% if f.object.link? -%>
+    <div>
+      <%= f.label :link %>
+      <%= f.text_field :link %>
+    </div>
+  <% end -%>
 
-  <!--
-  <div>
-    <%# f.label :body %>
-    <%# f.text_area :body %>
-  </div>
-  -->
+  <% if f.object.text? -%>
+    <div>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
+  <% end -%>
 
   <div>
+    <%= f.hidden_field :post_type %>
     <%= f.submit %>
   </div>
 <% end %>
