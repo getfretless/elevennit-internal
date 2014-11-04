@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params.require(:post).permit(:title, :link, :body))
+    post = Post.new(params.require(:post).permit(:title, :link, :body, :post_type))
     if post.save
       redirect_to posts_path, flash: { notice: 'Your post was saved successfully.' }
     else
@@ -18,6 +18,10 @@ class PostsController < ApplicationController
       @post = post
       render :new
     end
+  end
+
+  def show
+    @post = Post.find params[:id]
   end
 
 end
