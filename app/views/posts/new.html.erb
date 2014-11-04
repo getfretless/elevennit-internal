@@ -1,25 +1,25 @@
 <%= form_for @post do |f| %>
-  <div>
+  <fieldset>
     <%= f.label :title %>
     <%= f.text_field :title %>
-  </div>
+  </fieldset>
 
   <% if f.object.link? -%>
-    <div>
+    <fieldset>
       <%= f.label :link %>
       <%= f.text_field :link %>
-    </div>
+    </fieldset>
   <% end -%>
 
   <% if f.object.text? -%>
-    <div>
+    <fieldset>
       <%= f.label :body %>
       <%= f.text_area :body %>
-    </div>
+    </fieldset>
   <% end -%>
 
-  <div>
+  <fieldset>
     <%= f.hidden_field :post_type %>
     <%= f.submit %>
-  </div>
+  </fieldset>
 <% end %>
