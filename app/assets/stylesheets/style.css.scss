@@ -97,9 +97,18 @@ footer {
   text-align: center;
 }
 
-fieldset {
+main fieldset {
   width: 100%;
+  margin-bottom: 1.5em;
   input[type="text"], textarea {
     width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  textarea {
+    height: 100px;
   }
 }
