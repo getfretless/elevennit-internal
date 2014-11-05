@@ -98,8 +98,11 @@ footer {
 }
 
 main fieldset {
-  width: 100%;
-  margin-bottom: 1.5em;
+  width: 514px;
+  padding: 7px 5px;
+  font-size: large;
+  background-color: #cee3f8;
+  margin-bottom: 10px;
   input[type="text"], textarea {
     width: 100%;
     font-size: 14px;
