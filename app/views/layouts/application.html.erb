@@ -11,6 +11,14 @@
 <div class="container wrap">
   <div class="row">
     <div class="col-xs-12">
+      <nav id="categories">
+      <% Category.all.each_with_index do |c, i| -%>
+        <% if i > 0 -%>
+          <span class="separator">-</span>
+        <% end -%>
+        <%= link_to c.name, category_path(c) %>
+      <% end -%>
+      </nav>
       <header><%= link_to 'Elevennit', posts_path %></header>
     </div>
   </div>
@@ -37,10 +45,11 @@
         </main>
       </div>
       <div class="col-xs-4">
-        <nav>
+        <nav id="sidebar">
           <%= link_to 'Submit a new link', new_post_path %>
           <%= link_to 'Submit a new text post', new_post_path(post_type: :text) %>
           <%= link_to 'Create a new category', new_category_path %>
+          <div><%= yield :sidebar %></div>
         </nav>
       </div>
     </div>
