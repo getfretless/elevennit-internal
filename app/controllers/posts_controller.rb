@@ -38,6 +38,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Post.find params[:id]
+    if post.destroy
+      redirect_to posts_path, flash: { notice: 'Your post has been removed.' }
+    else
+      redirect_to posts_path, flash: { notice: 'We were unable to remove that post.' }
+    end
+  end
+
   private
 
   def post_params
