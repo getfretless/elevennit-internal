@@ -166,7 +166,6 @@ ul.posts, article {
 nav#categories {
   background-color: #f0f0f0;
   white-space: nowrap;
-  overflow: hidden;
   text-transform: uppercase;
   border-bottom: 1px solid gray;
   font-size: 10px;
@@ -174,6 +173,9 @@ nav#categories {
   line-height: 18px;
   margin-bottom: 0;
   padding-left: 5px;
+  ul {
+    overflow: hidden;
+  }
   a {
     display: inline;
     white-space: nowrap;
@@ -182,6 +184,21 @@ nav#categories {
   .separator {
     color: gray;
     margin: 0px .7ex 0px .7ex;
+  }
+  .dropdown {
+    display: inline-block;
+    button {
+      text-transform: uppercase;
+      border: 0;
+      background-color: inherit;
+      padding: 0;
+    }
+    .dropdown-menu {
+      font-size: 10px;
+    }
+    a {
+      display: block;
+    }
   }
 }
 
