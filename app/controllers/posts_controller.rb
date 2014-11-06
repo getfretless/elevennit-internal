@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find params[:id]
+    @comment = Comment.build_from(@post, current_user.id, '')
   end
 
   def edit
