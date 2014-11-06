@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'devise'
+gem 'acts_as_commentable_with_threading'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

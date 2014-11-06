@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  acts_as_commentable
   belongs_to :category
   belongs_to :user
   default_scope { order('updated_at DESC').includes(:category).includes(:user) }
