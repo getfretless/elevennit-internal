@@ -24,12 +24,16 @@
           </ul>
         </div>
         <span class="separator">|</span>
-        <% categories.each_with_index do |c, i| -%>
-          <% if i > 0 -%>
-            <span class="separator">-</span>
-          <% end -%>
-          <%= link_to c.name, category_path(c) %>
-        <% end -%>
+          <ul class="category-links">
+            <% categories.each_with_index do |c, i| -%>
+              <li>
+                <% if i > 0 -%>
+                  <span class="separator">-</span>
+                <% end -%>
+                <%= link_to c.name, category_path(c) %>
+              </li>
+            <% end -%>
+          </ul>
       </nav>
       <header><%= link_to 'Elevennit', posts_path %></header>
     </div>

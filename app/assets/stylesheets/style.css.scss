@@ -23,6 +23,16 @@ footer .well {
   padding-right: 0 !important;
 }
 
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.col-xs-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 header {
   background-color: #cee3f8;
   height: 45px;
@@ -172,21 +182,28 @@ nav#categories {
   height: 18px;
   line-height: 18px;
   margin-bottom: 0;
-  padding-left: 5px;
-  ul {
-    overflow: hidden;
-  }
-  a {
+
+  ul.category-links {
+    position: absolute;
     display: inline;
-    white-space: nowrap;
+    right: 0;
+    left: 95px;
+    overflow: hidden;
+    display: inline;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline;
+    }
   }
   .separator {
     color: gray;
     margin: 0px .7ex 0px .7ex;
   }
   .dropdown {
-    display: inline-block;
+    float: left;
+    padding-left: 5px;
     button {
       text-transform: uppercase;
       border: 0;
@@ -195,9 +212,6 @@ nav#categories {
     }
     .dropdown-menu {
       font-size: 10px;
-    }
-    a {
-      display: block;
     }
   }
 }
