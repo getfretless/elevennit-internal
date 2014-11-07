@@ -1,6 +1,6 @@
 module NestablesHelper
 
-  def nested_li(objects, options = {}, &block)
+  def nested_ol(objects, options = {}, &block)
     objects = objects.order(:lft) if objects.is_a? Class
 
     return '' if objects.size == 0
@@ -24,7 +24,7 @@ module NestablesHelper
           output << '</li>'
         else
           path << o.parent_id
-          output << '<ol class="dd-list">'
+          output << '<ol>'
         end
       elsif i != 0
         output << '</li>'
@@ -36,8 +36,8 @@ module NestablesHelper
     output.html_safe
   end
 
-  def sorted_nested_li(objects, order, &block)
-    nested_li sort_list(objects, order), &block
+  def sorted_nested_ol(objects, order, &block)
+    nested_ol sort_list(objects, order), &block
   end
 
   private
