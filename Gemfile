@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'devise'
 gem 'acts_as_commentable_with_threading'
+gem 'httparty'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
